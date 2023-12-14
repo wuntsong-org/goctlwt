@@ -3,7 +3,7 @@ package model
 import (
 	"errors"
 
-	"github.com/zeromicro/go-zero/core/stores/mon"
+	"github.com/wuntsong-org/go-zero-plus/core/stores/mon"
 )
 
 var (

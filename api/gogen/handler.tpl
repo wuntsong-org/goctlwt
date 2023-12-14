@@ -3,7 +3,7 @@ package {{.PkgName}}
 import (
 	"net/http"
 
-	"github.com/zeromicro/go-zero/rest/httpx"
+	"github.com/wuntsong-org/go-zero-plus/rest/httpx"
 	{{.ImportPackages}}
 )
 

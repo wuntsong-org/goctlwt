@@ -3,8 +3,8 @@ package main
 import (
 	"flag"
 
-	"github.com/zeromicro/go-zero/core/conf"
-	"github.com/zeromicro/go-zero/gateway"
+	"github.com/wuntsong-org/go-zero-plus/core/conf"
+	"github.com/wuntsong-org/go-zero-plus/gateway"
 )
 
 var configFile = flag.String("f", "etc/gateway.yaml", "config file")
