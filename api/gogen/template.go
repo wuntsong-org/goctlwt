@@ -8,7 +8,6 @@ import (
 
 const (
 	category                    = "api"
-	configTemplateFile          = "config.tpl"
 	contextTemplateFile         = "context.tpl"
 	etcTemplateFile             = "etc.tpl"
 	handlerTemplateFile         = "handler.tpl"
@@ -21,7 +20,6 @@ const (
 )
 
 var templates = map[string]string{
-	configTemplateFile:          configTemplate,
 	contextTemplateFile:         contextTemplate,
 	etcTemplateFile:             etcTemplate,
 	handlerTemplateFile:         handlerTemplate,

@@ -8,8 +8,6 @@ import (
 	"github.com/wuntsong-org/goctlwt/api/spec"
 	"github.com/wuntsong-org/goctlwt/config"
 	"github.com/wuntsong-org/goctlwt/util/format"
-	"github.com/wuntsong-org/goctlwt/util/pathx"
-	"github.com/wuntsong-org/goctlwt/vars"
 )
 
 const contextFilename = "service_context"
@@ -34,12 +32,6 @@ func genServiceContext(dir, rootPkg string, cfg *config.Config, api *spec.ApiSpe
 			fmt.Sprintf("middleware.New%s().%s", strings.Title(name), "Handle"))
 	}
 
-	configImport := "\"" + pathx.JoinPackages(rootPkg, configDir) + "\""
-	if len(middlewareStr) > 0 {
-		configImport += "\n\t\"" + pathx.JoinPackages(rootPkg, middlewareDir) + "\""
-		configImport += fmt.Sprintf("\n\t\"%s/rest\"", vars.ProjectOpenSourceURL)
-	}
-
 	return genFile(fileGenConfig{
 		dir:             dir,
 		subdir:          contextDir,
@@ -49,8 +41,6 @@ func genServiceContext(dir, rootPkg string, cfg *config.Config, api *spec.ApiSpe
 		templateFile:    contextTemplateFile,
 		builtinTemplate: contextTemplate,
 		data: map[string]string{
-			"configImport":         configImport,
-			"config":               "config.Config",
 			"middleware":           middlewareStr,
 			"middlewareAssignment": middlewareAssignment,
 		},
