@@ -9,7 +9,6 @@ import (
 const (
 	category                    = "api"
 	contextTemplateFile         = "context.tpl"
-	etcTemplateFile             = "etc.tpl"
 	handlerTemplateFile         = "handler.tpl"
 	logicTemplateFile           = "logic.tpl"
 	mainTemplateFile            = "main.tpl"
@@ -21,7 +20,6 @@ const (
 
 var templates = map[string]string{
 	contextTemplateFile:         contextTemplate,
-	etcTemplateFile:             etcTemplate,
 	handlerTemplateFile:         handlerTemplate,
 	logicTemplateFile:           logicTemplate,
 	mainTemplateFile:            mainTemplate,
